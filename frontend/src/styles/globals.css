@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-color: #0E1512;
+    --chalk-color: #EDEAE0;
+    --amber-color: #F2B84B;
+    --teal-color: #4C9A8E;
+    --grid-color: #2A332E;
+    --sage-color: #8FA69D;
+  }
+
+  body {
+    background-color: var(--bg-color);
+    color: var(--chalk-color);
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* Subtle chalk grid pattern for canvases and backgrounds */
+.chalk-grid {
+  background-size: 24px 24px;
+  background-image: 
+    linear-gradient(to right, rgba(42, 51, 46, 0.45) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(42, 51, 46, 0.45) 1px, transparent 1px);
+}
+
+/* Subtle chalk texture overlay */
+.chalk-texture {
+  background-image: radial-gradient(rgba(237, 234, 224, 0.03) 1px, transparent 0);
+  background-size: 16px 16px;
+}
+
+/* Custom subtle scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0E1512;
+}
+::-webkit-scrollbar-thumb {
+  background: #232D28;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3F4F48;
+}
